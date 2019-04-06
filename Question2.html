@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 2</title>
+</head>
+<body>
+
+<script>
+
+     function taxCalculator(tax) {
+
+        var taxPercentage = tax;
+
+        var func = function getAmount(amount) {
+            return amount * taxPercentage / 100;
+        }
+
+        return func;
+    }
+   var executor = taxCalculator(10);
+    console.log(executor(90));
+
+</script>
+
+</body>
+</html>

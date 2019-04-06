@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 4</title>
+</head>
+<body>
+
+<script>
+
+    //creating a class or an object
+     function Vehicle(type){//type in the param list is a constructor argument.No any explicit constructors bt here it is auto genetated with the definition.
+        Vehicle.vehicleCount++;
+        this.type = type;//implicit constructor
+     }
+
+     Vehicle.vehicleCount = 0;
+
+     Vehicle.prototype.drive = function(){
+         console.log('Vehicle is driving');
+     }
+
+     var vehicleX = new Vehicle('Toyota');
+
+     function Car(type){
+         Vehicle.call(this,type);
+     }
+
+     //Extending from Vehicle and creation of the class Car
+     Car.prototype = Object.create(Vehicle.prototype);
+     Car.prototype.constructor = Car;
+
+     Car.prototype.balanceWheels = function(){
+         console.log('Wheels are balanced');
+     }
+
+     var carNew = new Car('Benz');
+     carNew.drive();
+     carNew.balanceWheels();
+     console.log(carNew.type,Vehicle.vehicleCount);
+
+</script>
+
+</body>
+</html>

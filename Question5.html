@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 5</title>
+</head>
+<body>
+
+<script>
+
+    //let vehicleName = 'Toyota';
+    //vehicleName = 'Nissan';
+    //const country = 'Japan';
+
+    //To check let
+    function A(){
+
+        let vehicleName = 'Toyota';
+        console.log('Outside the loop..vehicleName = '+ vehicleName);
+
+
+        if(true){
+             let vehicleName = 'Benz';
+            console.log('Inside the loop..vehicleName = '+ vehicleName);
+        }
+
+        console.log('Outside the loop..vehicleName = '+ vehicleName);
+
+    }
+
+    A();
+
+    //To check var
+    function B(){
+         var vehicleName = 'Nissan';
+         console.log('Outside the loop..vehicleName = '+ vehicleName);
+
+         if(true){
+
+              var vehicleName = 'March';
+              console.log('Inside the loop..vehicleName = '+ vehicleName);
+         }
+
+        console.log('Outside the loop..vehicleName = '+ vehicleName);
+    }
+
+    B();
+
+    //To check const
+
+        function C(){
+          const country = 'Japan';
+          console.log('Country = '+ country);
+          //country = 'Sri Lanka';//Error
+          console.log('Country = '+ country);
+    }
+
+    C();
+
+
+
+</script>
+
+</body>
+</html>
